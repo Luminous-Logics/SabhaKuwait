@@ -1,0 +1,34 @@
+/* Reset margin and padding to remove any spacing */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Container to hold both images */
+.image-container {
+  position: relative; /* Makes it possible to position the second image inside it */
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+}
+
+.fullscreen-image {
+  width: 100%; /* Make image width 100% of the container */
+  height: 100%; /* Make image height 100% of the container */
+  object-fit: contain; /* Ensures the entire image is visible */
+  object-position: center; /* Centers the image if it doesn't fill the whole container */
+  display: block;
+}
+
+.top-left-image {
+  position: absolute; /* Position relative to the .image-container */
+  top: 40%; /* Place at the top */
+  left: 45%; /* Place at the left */
+  width: 100px; /* Set the size of the second image */
+  height: 100px; /* Set the size of the second image */
+  z-index: 10; /* Makes sure this image is above the first one */
+  object-fit: contain; /* Ensure the image scales to fit its container */
+}
